@@ -5,6 +5,8 @@ import {
   useControls,
 } from "react-zoom-pan-pinch";
 import { Modal } from "flowbite-react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const FloorPlan = ({ image, points }) => {
   const [openModal, setOpenModal] = React.useState(false);
@@ -55,7 +57,11 @@ const FloorPlan = ({ image, points }) => {
             <Controls />
             <TransformComponent>
               <div className="relative flex items-center justify-center">
-                <img
+                <LazyLoadImage
+                  effect="blur"
+                  wrapperProps={{
+                    style: { transitionDelay: "1s" },
+                  }}
                   src={image}
                   alt="Floor Plan"
                   className="w-full h-auto max-h-[80dvh]"
@@ -101,7 +107,11 @@ const FloorPlan = ({ image, points }) => {
               <>
                 <Controls />
                 <TransformComponent>
-                  <img
+                  <LazyLoadImage
+                    effect="blur"
+                    wrapperProps={{
+                      style: { transitionDelay: "1s" },
+                    }}
                     src={pointSelected?.image}
                     alt={pointSelected?.title}
                     className="w-full h-auto object-contain"
