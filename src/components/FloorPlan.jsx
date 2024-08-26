@@ -75,7 +75,7 @@ const FloorPlan = ({ image, points }) => {
                       left: point.x,
                       transform: "translate(-50%, -50%)",
                       height: "5%",
-                      width: "2.5%",
+                      width: "2.2%",
                     }}
                     onClick={() => {
                       setPointSelected(point);
