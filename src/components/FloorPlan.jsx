@@ -101,7 +101,7 @@ const FloorPlan = ({ image, points }) => {
         className="w-full"
       >
         <Modal.Header>{pointSelected?.title}</Modal.Header>
-        <Modal.Body className="w-full">
+        <Modal.Body className="w-full min-h-[70dvh]">
           <TransformWrapper smooth={true}>
             {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
               <>
